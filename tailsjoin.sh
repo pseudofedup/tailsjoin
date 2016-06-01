@@ -111,7 +111,7 @@ BUILDING AND INSTALLING LIBSODIUM TO SURVIVE REBOOTS...
   mkdir ../joinmarket/libsodium
   ( cd libsodium-1.0.4/ && ./configure --prefix=$(pwd) && make && make install )
   mv libsodium-1.0.4/lib/libsodium.* ../joinmarket/libsodium/
-  sed -i "s|\/usr\/local\/lib|$(pwd | sed 's|tailsjoin|joinmarket\/libsodium|')|" ../joinmarket/lib/libnacl/__init__.py
+  sed -i "s|\/usr\/local\/lib|$(pwd | sed 's|tailsjoin|joinmarket\/libsodium|')|" ../joinmarket/libnacl/__init__.py
   ( cd ../joinmarket && git commit -a -m "Tailsjoin survive reboots" )
 else
   echo "
